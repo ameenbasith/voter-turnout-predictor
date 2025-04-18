@@ -14,9 +14,9 @@ import seaborn as sns
 
 # Set up paths
 print("Setting up directories...")
-raw_dir = 'data/raw'
-processed_dir = 'data/processed'
-figures_dir = 'reports/figures'
+raw_dir = '../data/raw'
+processed_dir = '../data/processed'
+figures_dir = '../reports/figures'
 
 # Create directories if they don't exist
 os.makedirs(processed_dir, exist_ok=True)
@@ -86,7 +86,7 @@ def load_and_process_individual_census_files():
     """
     print("\nLoading cleaned census data...")
 
-    clean_dir = "data/raw"  # updated to match your moved location
+    clean_dir = "../data/raw"  # updated to match your moved location
     census_dfs = []
 
     for year in [2012, 2016, 2020]:

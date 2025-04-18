@@ -179,7 +179,7 @@ def download_acs_data(year):
 def main():
     """Main function to collect and save census data for multiple years."""
     # Create directory if it doesn't exist
-    os.makedirs('data/raw', exist_ok=True)
+    os.makedirs('../data/raw', exist_ok=True)
 
     # Download data for recent election years (adjust as needed)
     years = [2012, 2016, 2020]

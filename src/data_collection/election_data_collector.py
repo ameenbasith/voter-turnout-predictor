@@ -22,7 +22,7 @@ def download_election_data():
         pandas.DataFrame: Election returns by county
     """
     # Check if the file already exists locally
-    local_file_path = 'data/raw/countypres_2000-2020.csv'
+    local_file_path = '../data/raw/countypres_2000-2020.csv'
 
     if os.path.exists(local_file_path):
         print(f"Loading election data from local file: {local_file_path}")
@@ -123,8 +123,8 @@ def process_election_data(df):
 def main():
     """Main function to collect and process election data."""
     # Create data directories if they don't exist
-    os.makedirs('data/raw', exist_ok=True)
-    os.makedirs('data/processed', exist_ok=True)
+    os.makedirs('../data/raw', exist_ok=True)
+    os.makedirs('../data/processed', exist_ok=True)
 
     try:
         # Download the data
