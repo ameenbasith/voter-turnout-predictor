@@ -7,9 +7,8 @@ Political Trends and Demographic Insights Analysis
 Main entry point script that coordinates the entire analysis workflow.
 """
 
-import os
 import logging
-from data_loading import load_census_data, load_election_data, merge_data
+from src.data_collection.data_loading import load_census_data, load_election_data, merge_data
 from analysis import (
     analyze_partisan_shifts,
     analyze_turnout_changes,

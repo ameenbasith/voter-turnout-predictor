@@ -9,10 +9,10 @@ import pandas as pd
 import os
 
 # Paths to your raw data
-election_path = 'data/raw/countypres_2000-2020.csv'
-census_2012_path = 'data/raw/census_county_data_2012.csv'
-census_2016_path = 'data/raw/census_county_data_2016.csv'
-census_2020_path = 'data/raw/census_county_data_2020.csv'
+election_path = '../data/raw/countypres_2000-2020.csv'
+census_2012_path = '../data/raw/census_county_data_2012.csv'
+census_2016_path = '../data/raw/census_county_data_2016.csv'
+census_2020_path = '../data/raw/census_county_data_2020.csv'
 
 # Load election data
 elections = pd.read_csv(election_path)
@@ -70,7 +70,7 @@ turnout_change = (turnout_2020 - turnout_2016) / turnout_2016 * 100
 print(f"\n✅ National Turnout Change from 2016 to 2020: {turnout_change:.2f}%")
 
 # Save results
-os.makedirs('data/analysis', exist_ok=True)
+os.makedirs('../data/analysis', exist_ok=True)
 national_turnout.to_csv('data/analysis/national_turnout_by_year.csv', index=False)
 
 print("\n✅ Saved national turnout analysis!")

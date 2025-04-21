@@ -12,15 +12,15 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Set paths
-analysis_dir = "data/analysis"
-figures_dir = "reports/figures"
+analysis_dir = "../data/analysis"
+figures_dir = "../reports/figures"
 
 # Load files
 flipped_rep_to_dem = pd.read_csv(os.path.join(analysis_dir, "flipped_rep_to_dem_2016_2020.csv"))
 flipped_dem_to_rep = pd.read_csv(os.path.join(analysis_dir, "flipped_dem_to_rep_2016_2020.csv"))
 county_turnout = pd.read_csv(os.path.join(analysis_dir, "county_turnout_analysis_2020.csv"))
 county_competitiveness = pd.read_csv(os.path.join(analysis_dir, "county_competitiveness_2020.csv"))
-census_2020 = pd.read_csv(os.path.join("data", "raw", "census_county_data_2020.csv"))
+census_2020 = pd.read_csv(os.path.join("../data", "raw", "census_county_data_2020.csv"))
 
 # === County Flips Summary ===
 print("\n=== County Flips 2016 → 2020 ===")
@@ -52,7 +52,7 @@ print(county_competitiveness.groupby('competitiveness')['margin'].mean())
 print("\n=== Education Levels by Competitiveness (2020) ===")
 
 # Load 2020 Census Data
-census_2020 = pd.read_csv(os.path.join("data", "raw", "census_county_data_2020.csv"))
+census_2020 = pd.read_csv(os.path.join("../data", "raw", "census_county_data_2020.csv"))
 
 # Fix FIPS columns
 census_2020['fips'] = census_2020['fips'].astype(str).str.zfill(5)
